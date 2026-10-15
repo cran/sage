@@ -1,0 +1,35 @@
+Package: sage
+Type: Package
+Title: Retrieve Slices of the Small-Area Global Elections Archive
+Version: 0.2.0
+Authors@R: c(
+    person("Noah", "Dasanaike", email = "dasanaike.noah@gmail.com",
+           role = c("aut", "cre", "cph")),
+    person("Dmitry", "Shkolnik", role = "ctb"))
+Description: Downloads and subsets slices of the Small-Area Global Elections
+    (SAGE) archive, a harmonized collection of polling-station and
+    precinct-level election results, without having to read monolithic
+    country-level files. Reads partitioned 'Parquet' from a public bucket
+    (configurable through the 'SAGE_SOURCE' environment variable, the
+    'sage_set_source()' function, or a local copy of the archive) and exposes
+    a 'sage_load(country, years, columns)' function returning a 'tibble', plus
+    helpers for the accompanying boundary polygons and candidate-level vote
+    sidecars. See <https://github.com/noahdasanaike/sage> for the archive
+    itself.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Language: en-US
+Depends: R (>= 4.0)
+Imports: arrow (>= 14.0.0), dplyr, rlang, tibble, utils
+Suggests: curl, sf, sfarrow, testthat (>= 3.0.0)
+Config/testthat/edition: 3
+RoxygenNote: 7.2.3
+URL: https://github.com/noahdasanaike/sage
+BugReports: https://github.com/noahdasanaike/sage/issues
+NeedsCompilation: no
+Packaged: 2026-10-04 17:52:17 UTC; Noah
+Author: Noah Dasanaike [aut, cre, cph],
+  Dmitry Shkolnik [ctb]
+Maintainer: Noah Dasanaike <dasanaike.noah@gmail.com>
+Repository: CRAN
+Date/Publication: 2026-10-15 16:40:02 UTC
